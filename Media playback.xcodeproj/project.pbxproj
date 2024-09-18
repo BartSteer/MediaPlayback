@@ -14,6 +14,9 @@
 		FB78393F2C90330900967DA2 /* Media_playbackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78393E2C90330900967DA2 /* Media_playbackTests.swift */; };
 		FB7839492C90330900967DA2 /* Media_playbackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7839482C90330900967DA2 /* Media_playbackUITests.swift */; };
 		FB78394B2C90330900967DA2 /* Media_playbackUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78394A2C90330900967DA2 /* Media_playbackUITestsLaunchTests.swift */; };
+		FB78395A2C9069C600967DA2 /* VideoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7839592C9069C600967DA2 /* VideoCard.swift */; };
+		FBF4EFB12C99675300DFAD79 /* playerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF4EFB02C99675300DFAD79 /* playerController.swift */; };
+		FBF4EFB32C996E3800DFAD79 /* playerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF4EFB22C996E3800DFAD79 /* playerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,10 @@
 		FB7839442C90330900967DA2 /* Media playbackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Media playbackUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7839482C90330900967DA2 /* Media_playbackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media_playbackUITests.swift; sourceTree = "<group>"; };
 		FB78394A2C90330900967DA2 /* Media_playbackUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media_playbackUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FB7839572C904B1D00967DA2 /* Media-playback-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Media-playback-Info.plist"; sourceTree = SOURCE_ROOT; };
+		FB7839592C9069C600967DA2 /* VideoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCard.swift; sourceTree = "<group>"; };
+		FBF4EFB02C99675300DFAD79 /* playerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerController.swift; sourceTree = "<group>"; };
+		FBF4EFB22C996E3800DFAD79 /* playerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +101,14 @@
 		FB78392C2C90330700967DA2 /* Media playback */ = {
 			isa = PBXGroup;
 			children = (
+				FB7839582C9069B400967DA2 /* components */,
+				FB7839572C904B1D00967DA2 /* Media-playback-Info.plist */,
 				FB78392D2C90330700967DA2 /* Media_playbackApp.swift */,
 				FB78392F2C90330700967DA2 /* ContentView.swift */,
+				FBF4EFB22C996E3800DFAD79 /* playerView.swift */,
 				FB7839312C90330900967DA2 /* Assets.xcassets */,
 				FB7839332C90330900967DA2 /* Preview Content */,
+				FBF4EFB02C99675300DFAD79 /* playerController.swift */,
 			);
 			path = "Media playback";
 			sourceTree = "<group>";
@@ -125,6 +136,14 @@
 				FB78394A2C90330900967DA2 /* Media_playbackUITestsLaunchTests.swift */,
 			);
 			path = "Media playbackUITests";
+			sourceTree = "<group>";
+		};
+		FB7839582C9069B400967DA2 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				FB7839592C9069C600967DA2 /* VideoCard.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +278,9 @@
 			files = (
 				FB7839302C90330700967DA2 /* ContentView.swift in Sources */,
 				FB78392E2C90330700967DA2 /* Media_playbackApp.swift in Sources */,
+				FBF4EFB12C99675300DFAD79 /* playerController.swift in Sources */,
+				FBF4EFB32C996E3800DFAD79 /* playerView.swift in Sources */,
+				FB78395A2C9069C600967DA2 /* VideoCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +447,7 @@
 				DEVELOPMENT_TEAM = CURJGCYR4B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Media-playback-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,6 +477,7 @@
 				DEVELOPMENT_TEAM = CURJGCYR4B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Media-playback-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
