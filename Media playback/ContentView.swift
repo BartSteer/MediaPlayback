@@ -18,17 +18,17 @@ struct ContentView: View {
             VStack {
                 //fix
                 TextField("Search", text: $videoManager.customQuery)
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                                    .padding(.horizontal, 20)
-                                    .padding(.top, 5)
-                                    .onSubmit {
-                                        // Fetch videos based on the custom query when the user submits
-                                        if !videoManager.customQuery.isEmpty {
-                                            Task {
-                                                await videoManager.findVideos(topic: videoManager.customQuery)
-                                            }
-                                        }
-                                    }
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.horizontal, 20)
+                    .padding(.top, 5)
+                    .onSubmit {
+                        // Fetch videos based on the custom query when the user submits
+                        if !videoManager.customQuery.isEmpty {
+                            Task {
+                                await videoManager.findVideos(topic: videoManager.customQuery)
+                            }
+                        }
+                    }
                 
                 
                 

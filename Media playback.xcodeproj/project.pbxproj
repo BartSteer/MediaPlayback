@@ -18,7 +18,6 @@
 		FBE14F252CA2A2E90049F729 /* videoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE14F242CA2A2E90049F729 /* videoView.swift */; };
 		FBE14F272CA2B9AF0049F729 /* QueryTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE14F262CA2B9AF0049F729 /* QueryTag.swift */; };
 		FBF4EFB12C99675300DFAD79 /* playerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF4EFB02C99675300DFAD79 /* playerController.swift */; };
-		FBF4EFB32C996E3800DFAD79 /* playerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF4EFB22C996E3800DFAD79 /* playerView.swift */; };
 		FBF4EFB72C9AE5C100DFAD79 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF4EFB62C9AE5C100DFAD79 /* VideoManager.swift */; };
 		FBF4EFB92C9AF21100DFAD79 /* videoData.json in Resources */ = {isa = PBXBuildFile; fileRef = FBF4EFB82C9AF21100DFAD79 /* videoData.json */; };
 		FBF4EFBB2C9AF43D00DFAD79 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF4EFBA2C9AF43D00DFAD79 /* ModelData.swift */; };
@@ -57,7 +56,6 @@
 		FBE14F242CA2A2E90049F729 /* videoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoView.swift; sourceTree = "<group>"; };
 		FBE14F262CA2B9AF0049F729 /* QueryTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryTag.swift; sourceTree = "<group>"; };
 		FBF4EFB02C99675300DFAD79 /* playerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerController.swift; sourceTree = "<group>"; };
-		FBF4EFB22C996E3800DFAD79 /* playerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerView.swift; sourceTree = "<group>"; };
 		FBF4EFB62C9AE5C100DFAD79 /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
 		FBF4EFB82C9AF21100DFAD79 /* videoData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = videoData.json; path = ../../../../Downloads/videoData.json; sourceTree = "<group>"; };
 		FBF4EFBA2C9AF43D00DFAD79 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 				FBF4EFB62C9AE5C100DFAD79 /* VideoManager.swift */,
 				FBF4EFB02C99675300DFAD79 /* playerController.swift */,
 				FB78392F2C90330700967DA2 /* ContentView.swift */,
-				FBF4EFB22C996E3800DFAD79 /* playerView.swift */,
 				FBE14F242CA2A2E90049F729 /* videoView.swift */,
 				FB7839582C9069B400967DA2 /* components */,
 				FB7839312C90330900967DA2 /* Assets.xcassets */,
@@ -295,7 +292,6 @@
 				FB7839302C90330700967DA2 /* ContentView.swift in Sources */,
 				FB78392E2C90330700967DA2 /* Media_playbackApp.swift in Sources */,
 				FBF4EFB12C99675300DFAD79 /* playerController.swift in Sources */,
-				FBF4EFB32C996E3800DFAD79 /* playerView.swift in Sources */,
 				FBE14F252CA2A2E90049F729 /* videoView.swift in Sources */,
 				FB78395A2C9069C600967DA2 /* VideoCard.swift in Sources */,
 				FBF4EFB72C9AE5C100DFAD79 /* VideoManager.swift in Sources */,
@@ -480,6 +476,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "fontys.Media-playback";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -510,6 +510,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "fontys.Media-playback";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
