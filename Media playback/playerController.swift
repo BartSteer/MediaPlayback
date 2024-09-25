@@ -46,8 +46,6 @@ class PlayerController: ObservableObject {
             return
         }
         player = AVPlayer(url: videoURL)
-        //continue playing when closing the app
-        player?.automaticallyWaitsToMinimizeStalling = false
         // Set up metadata for the current item
         setupMetadata()
     }
