@@ -11,37 +11,43 @@ import AVFoundation
 
 struct ContentView: View {
     @StateObject var videoManager = VideoManager()
+    @StateObject var audioManager = AudioManager() // Add audio player manager
     var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
     
     var body: some View {
         NavigationView {
             VStack {
-                //fix
-                TextField("Search", text: $videoManager.customQuery)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(.horizontal, 20)
-                    .padding(.top, 5)
-                    .onSubmit {
-                        // Fetch videos based on the custom query when the user submits
-                        if !videoManager.customQuery.isEmpty {
-                            Task {
-                                await videoManager.findVideos(topic: videoManager.customQuery)
+                HStack {
+                    TextField("Search", text: $videoManager.customQuery)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding(.horizontal, 20)
+                        .padding(.top, 5)
+                        .onSubmit {
+                            if !videoManager.customQuery.isEmpty {
+                                Task {
+                                    await videoManager.findVideos(topic: videoManager.customQuery)
+                                }
                             }
                         }
-                    }
-                
-                
-                
+                    
+                    // Navigation link for the speaker icon
+                                      NavigationLink(destination: AudioSelectionView(audioManager: audioManager)) {
+                                          Image(systemName: "headphones") // Use the filled speaker icon
+                                              .resizable()
+                                              .frame(width: 30, height: 30)
+                                              .padding(.trailing, 20)
+                                              .foregroundColor(.white)
+                                      }
+                                  }
+
                 HStack {
                     ForEach(Query.allCases, id: \.self) { searchQuery in
                         QueryTag(query: searchQuery, isSelected: videoManager.selectedQuery == searchQuery)
                             .onTapGesture {
-                                // When the user taps on a QueryTag, we'll change the selectedQuery from VideoManager
                                 videoManager.selectedQuery = searchQuery
                             }
                     }
                 }
-                
                 
                 ScrollView {
                     if videoManager.videos.isEmpty {
