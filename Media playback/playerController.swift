@@ -7,20 +7,23 @@
 
 import Foundation
 import AVKit
-import UIKit // For UIImage
 
 class PlayerController: ObservableObject {
     // MARK: - Published Properties
+
+    // Published properties to trigger UI updates when changed
     @Published var playbackVideoLink: String = ""
     @Published var playbackTitle: String = ""
     @Published var playbackArtist: String = ""
     @Published var playbackArtwork: String = ""
 
     // MARK: - AVPlayer and AVPlayerViewController Properties
+
     var player: AVPlayer?
     var avPlayerViewController: AVPlayerViewController = AVPlayerViewController()
 
     // MARK: - Initialization and Setup
+
     func initPlayer(
         title: String,
         link: String,
@@ -39,13 +42,11 @@ class PlayerController: ObservableObject {
     }
 
     // MARK: - AVPlayer Setup
+
     private func setupPlayer() {
         // Initialize AVPlayer with the provided video link
-        guard let videoURL = URL(string: playbackVideoLink) else {
-            print("Invalid video URL")
-            return
-        }
-        player = AVPlayer(url: videoURL)
+        player = AVPlayer(url: URL(string: playbackVideoLink)!)
+
         // Set up metadata for the current item
         setupMetadata()
     }
@@ -71,19 +72,18 @@ class PlayerController: ObservableObject {
 
     // Set up artwork metadata based on UIImage
     private func setupArtworkMetadata(_ artwork: AVMutableMetadataItem) {
-        if let image = UIImage(named: playbackArtwork) {
+        if let image = UIImage(named: "Artist") {
             if let imageData = image.jpegData(compressionQuality: 1.0) {
                 artwork.identifier = .commonIdentifierArtwork
                 artwork.value = imageData as NSData
                 artwork.dataType = kCMMetadataBaseDataType_JPEG as String
                 artwork.extendedLanguageTag = "und"
             }
-        } else {
-            print("Artwork image not found")
         }
     }
 
     // MARK: - AVPlayerViewController Setup
+
     private func setupAVPlayerViewController() {
         // Assign AVPlayer to AVPlayerViewController
         avPlayerViewController.player = player
@@ -92,10 +92,13 @@ class PlayerController: ObservableObject {
     }
 
     // MARK: - Playback Control
+
+    // Pause the AVPlayer
     func pausePlayer() {
         player?.pause()
     }
 
+    // Play the AVPlayer
     func playPlayer() {
         player?.play()
     }

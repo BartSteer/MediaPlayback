@@ -36,7 +36,7 @@ struct ContentView: View {
                                               .resizable()
                                               .frame(width: 30, height: 30)
                                               .padding(.trailing, 20)
-                                              .foregroundColor(.white)
+                                              .foregroundColor(.black)
                                       }
                                   }
 
